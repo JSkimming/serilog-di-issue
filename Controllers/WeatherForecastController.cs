@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace SerilogDiIssue.Controllers;
 
@@ -11,7 +12,7 @@ public class WeatherForecastController : ControllerBase
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-    public WeatherForecastController()
+    public WeatherForecastController(IDiagnosticContext _)
     {
     }
 
